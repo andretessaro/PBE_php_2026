@@ -1,5 +1,8 @@
 <?php 
 
+session_start();
+require_once "./Model/UsuarioModel.php";
+
 class UsuarioController{
 
     public function telaCadastro(){
@@ -12,6 +15,17 @@ class UsuarioController{
 
         $usuario = new Usuario($nome, $email);
         $usuario->salvar();
+        header('Location: /PBE_PHP_2026/MVC_exemplo/usuario/telaCadastro');
+        exit;
+    }
+
+    public function listarUsuarios(){
+        $usuarios = Usuario::Listar();
+        echo "<pre>";
+        print_r($usuarios);
+        echo "</pre>";
+        require 'View/usuarioListar.php';
+
     }
 }
 
