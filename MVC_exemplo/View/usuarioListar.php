@@ -14,15 +14,19 @@
             <th>Email</th>
             <th>ações</th>
         </th>
-        <?php foreach($usuarios as $u): ?>
+        <?php foreach($usuarios as $id => $u): ?>
             <tr>
                 <td><?= $u['nome']?></td>
                 <td><?= $u['email']?></td>
-                <td>próxima aula</td>
+                <td>
+                    <a href="/PBE_PHP_2026/MVC_exemplo/usuario/telaEditar?id=<?= $id ?>">
+                        Editar
+                    </a>            
+                    </td>
+                </tr>
               <?php endforeach; ?>
-            </tr>
         
-</table>
+    </table>
     
 </body>
 </html>
