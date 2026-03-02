@@ -38,7 +38,12 @@ class UsuarioController{
         $usuario = atualizar($_GET['id']);
         header('Location: /PHP_PBE_2026/MVC_exemplo/usuario/telaEditar?id='.($_GET['id']));
         exit;
+    }
 
+    public function excluir(){
+        Usuario::excluir($_GET['id']);
+        header('Location: /PBE_PHP_2026/MVC_exemplo/usuario/listar');
+        exit;
     }
 }
 

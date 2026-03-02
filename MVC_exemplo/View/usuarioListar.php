@@ -21,7 +21,10 @@
                 <td>
                     <a href="/PBE_PHP_2026/MVC_exemplo/usuario/telaEditar?id=<?= $id ?>">
                         Editar
-                    </a>            
+                    </a>
+                    <a href="/PBE_PHP_2026/MVC_exemplo/usuario/excluir?id=<?= $id ?>">
+                        Excluir
+
                     </td>
                 </tr>
               <?php endforeach; ?>
